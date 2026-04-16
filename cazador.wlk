@@ -1,11 +1,12 @@
+//CAZADOR
 object cazador {
     method peso() = 80  
 
-    method intercatuarConLobo() {
+    method interactuarConLobo(lobo) {
         if (lobo.peso() > 100) {
-                lobo.sufreCrisis()
+                lobo.sufrirCrisis()
         } else {
-                lobo.bajrPeso(20)
+                lobo.bajarPeso(20)
         }
     }
 }

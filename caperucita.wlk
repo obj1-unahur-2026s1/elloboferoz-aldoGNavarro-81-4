@@ -1,3 +1,4 @@
+//CAPERUCITA
 object caperucita {
     var cantidadDeManzanas = 6
     const pesoManzana = 0.2

@@ -1,14 +1,16 @@
-import abuelita.abuelita
+import abuelita.*
+import caperucita.*
+import cazador.*
 object feroz {
     var peso = 10  
 
     method pesoSaludable() {
-        return (peso = peso >= 20) and (peso <= 150)
+        return (peso >= 20) and (peso <= 150)
     }
     method aumentarPeso(cantidad) {
         peso = peso + cantidad
     }
-    method bajrPeso(cantidad) {
+    method bajarPeso(cantidad) {
         peso = 0.max(peso - cantidad) 
     }
     method sufrirCrisis() {
@@ -18,7 +20,7 @@ object feroz {
         self.aumentarPeso(algo.peso() * 0.1)
     }
     method correr() {
-        self.bajrPeso(1)
+        self.bajarPeso(1)
     }
     method peso() = peso
 }
