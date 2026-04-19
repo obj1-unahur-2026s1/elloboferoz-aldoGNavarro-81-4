@@ -1,0 +1,37 @@
+import feroz.*
+import abuelita.*
+import caperucita.*
+import cazador.*
+
+describe "Pruebas sobre Feroz" {
+
+  test "Feroz inicia con un peso de 10 unidades" {
+    assert.equals(10, feroz.peso())
+  }
+
+  test "Feroz no está saludable al inicio del cuento" {
+    assert.notThat(feroz.pesoSaludable())
+  }
+
+  test "Feroz corre y come a la abuela. Aumenta el peso" {
+    feroz.correr() // baja a 9
+    feroz.comer(abuelita) // suma 50 * 0.1 = 5
+    assert.equals(14, feroz.peso())
+  }
+
+  test "Peso de caperucita con manzanas" {
+      // Peso base 60 + (6 * 0.2)
+      assert.equals(61.2, caperucita.peso())
+  }
+
+  test "Feroz sufre una crisis y su peso vuelve al valor inicial" {
+    feroz.comer(abuelita)
+    feroz.sufrirCrisis()
+    assert.equals(10, feroz.peso())
+  }
+  
+  test "El cazador logra que el lobo disminuya su peso al interactuar" {
+      cazador.interactuarConLobo(feroz)
+      assert.equals(0, feroz.peso())
+  }
+}
